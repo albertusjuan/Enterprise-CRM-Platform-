@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function DashboardPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Overview</h1>
-      <p className="text-slate-600 mt-1">Dashboard coming soon</p>
-=======
 import { getDashboardStats, getRecentActivities } from '@/features/dashboard'
 import { StatsCard } from '@/features/dashboard/components/StatsCard'
 import { QuickActions } from '@/features/dashboard/components/QuickActions'
@@ -75,7 +68,6 @@ export default async function DashboardPage() {
       <QuickActions />
 
       <RecentActivityList activities={recentActivities} />
->>>>>>> feat/dashboard
     </div>
   )
 }

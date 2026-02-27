@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function ReportsPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Reports</h1>
-      <p className="text-slate-600 mt-1">Reports and analytics coming soon</p>
-=======
 import { getReportsData, getActivityBreakdown, getOutcomeStats, getTopPerformers } from '@/features/reports'
 import { StatsCard } from '@/features/dashboard/components/StatsCard'
 import { ActivityBreakdown } from '@/features/reports/components/ActivityBreakdown'
@@ -57,7 +50,6 @@ export default async function ReportsPage() {
       </div>
 
       <TopPerformers performers={topPerformers} />
->>>>>>> feat/reports
     </div>
   )
 }

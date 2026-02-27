@@ -1,14 +1,4 @@
 import { requireAdmin } from '@/shared/lib/auth/guards'
-<<<<<<< HEAD
-
-export default async function AdminPage() {
-  await requireAdmin()
-  
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Admin Panel</h1>
-      <p className="text-slate-600 mt-1">User management coming soon</p>
-=======
 import { getAllUsers, getAdminStats } from '@/features/admin'
 import { UserList } from '@/features/admin'
 import { StatsCard } from '@/features/dashboard/components/StatsCard'
@@ -52,7 +42,6 @@ export default async function AdminPage() {
         <h2 className="text-xl font-semibold text-slate-900 mb-4">User Management</h2>
         <UserList users={users} />
       </div>
->>>>>>> feat/admin
     </div>
   )
 }

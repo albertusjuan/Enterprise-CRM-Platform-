@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function FollowUpsPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Follow-ups</h1>
-      <p className="text-slate-600 mt-1">Follow-up tracking coming soon</p>
-=======
 import { getFollowUps } from '@/features/follow-ups'
 import { FollowUpsList } from '@/features/follow-ups'
 
@@ -39,7 +32,6 @@ export default async function FollowUpsPage() {
       )}
 
       <FollowUpsList followUps={followUps} />
->>>>>>> feat/follow-ups
     </div>
   )
 }

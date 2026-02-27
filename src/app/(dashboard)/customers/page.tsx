@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-export default function CustomersPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Customers</h1>
-      <p className="text-slate-600 mt-1">Customer management coming soon</p>
-    </div>
-=======
 import { getCustomers, getCities, getIndustries } from '@/features/customers'
 import { CustomerList } from '@/features/customers'
 import { CustomerFiltersSchema } from '@/features/customers/schemas/customers.schema'
@@ -33,6 +25,5 @@ export default async function CustomersPage({ searchParams }: { searchParams: Pr
       filters={filters}
       canEdit={canEditCustomer(profile?.role)}
     />
->>>>>>> feat/customers
   )
 }
