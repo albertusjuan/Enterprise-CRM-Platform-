@@ -37,8 +37,8 @@ export async function createCustomer(input: { customer: CustomerInput, contacts:
     notes: 'Initial contact - customer added to system',
   })
 
-  revalidatePath('/dashboard/customers')
-  redirect(`/dashboard/customers/${customer.id}`)
+  revalidatePath('/customers')
+  redirect(`/customers/${customer.id}`)
 }
 
 export async function updateCustomer(id: string, input: { customer: CustomerInput, contacts: ContactInput[] }) {
@@ -65,8 +65,8 @@ export async function updateCustomer(id: string, input: { customer: CustomerInpu
     await supabase.from('contacts').insert(contactsToInsert)
   }
 
-  revalidatePath(`/dashboard/customers/${id}`)
-  revalidatePath('/dashboard/customers')
+  revalidatePath(`/customers/${id}`)
+  revalidatePath('/customers')
 }
 
 export async function deleteCustomer(id: string) {
@@ -80,6 +80,6 @@ export async function deleteCustomer(id: string) {
 
   if (error) throw error
 
-  revalidatePath('/dashboard/customers')
-  redirect('/dashboard/customers')
+  revalidatePath('/customers')
+  redirect('/customers')
 }

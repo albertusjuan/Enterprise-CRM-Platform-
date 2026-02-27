@@ -39,7 +39,7 @@ export function CustomerTable({ customers }: CustomerTableProps) {
             return (
               <tr key={customer.id} className="hover:bg-slate-50 transition-colors">
                 <td className="px-6 py-4">
-                  <Link href={`/dashboard/customers/${customer.id}`} className="font-medium text-slate-900 hover:text-slate-700">
+                  <Link href={`/customers/${customer.id}`} className="font-medium text-slate-900 hover:text-slate-700">
                     {customer.company_name}
                   </Link>
                 </td>

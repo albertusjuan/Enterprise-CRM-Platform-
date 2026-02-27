@@ -12,10 +12,10 @@ interface SidebarProps {
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: '🏠' },
-  { name: 'Follow-ups', href: '/dashboard/follow-ups', icon: '🔔' },
-  { name: 'Customers', href: '/dashboard/customers', icon: '👥' },
-  { name: 'Activities', href: '/dashboard/activities', icon: '📋' },
-  { name: 'Reports', href: '/dashboard/reports', icon: '📊' },
+  { name: 'Follow-ups', href: '/follow-ups', icon: '🔔' },
+  { name: 'Customers', href: '/customers', icon: '👥' },
+  { name: 'Activities', href: '/activities', icon: '📋' },
+  { name: 'Reports', href: '/reports', icon: '📊' },
 ]
 
 export function Sidebar({ userRole, userName, onLogout }: SidebarProps) {
@@ -75,9 +75,9 @@ export function Sidebar({ userRole, userName, onLogout }: SidebarProps) {
 
           {userRole === 'admin' && (
             <Link
-              href="/dashboard/admin"
+              href="/admin"
               className={`flex items-center gap-3 px-3 py-2.5 rounded-md font-medium text-sm transition-all ${
-                isActive('/dashboard/admin')
+                isActive('/admin')
                   ? 'bg-slate-800 text-white border border-slate-700'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
               }`}

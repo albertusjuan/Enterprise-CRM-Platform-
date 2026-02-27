@@ -66,7 +66,7 @@ export function UserList({ users }: UserListProps) {
                 </td>
                 <td className="px-6 py-4">
                   <Link
-                    href={`/dashboard/admin/users/${user.id}`}
+                    href={`/admin/users/${user.id}`}
                     className="text-slate-700 hover:text-slate-900 text-sm font-medium"
                   >
                     Edit

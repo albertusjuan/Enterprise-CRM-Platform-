@@ -28,9 +28,9 @@ export async function createActivity(input: ActivityInput) {
     .update({ last_contact_date: validated.activity_date })
     .eq('id', validated.customer_id)
 
-  revalidatePath(`/dashboard/customers/${validated.customer_id}`)
-  revalidatePath('/dashboard/activities')
-  revalidatePath('/dashboard/follow-ups')
+  revalidatePath(`/customers/${validated.customer_id}`)
+  revalidatePath('/activities')
+  revalidatePath('/follow-ups')
   
   return activity
 }
@@ -56,9 +56,9 @@ export async function updateActivity(id: string, input: ActivityInput) {
     .update({ last_contact_date: validated.activity_date })
     .eq('id', validated.customer_id)
 
-  revalidatePath(`/dashboard/customers/${validated.customer_id}`)
-  revalidatePath('/dashboard/activities')
-  revalidatePath('/dashboard/follow-ups')
+  revalidatePath(`/customers/${validated.customer_id}`)
+  revalidatePath('/activities')
+  revalidatePath('/follow-ups')
 }
 
 export async function deleteActivity(id: string, customerId: string) {
@@ -72,6 +72,6 @@ export async function deleteActivity(id: string, customerId: string) {
 
   if (error) throw error
 
-  revalidatePath(`/dashboard/customers/${customerId}`)
-  revalidatePath('/dashboard/activities')
+  revalidatePath(`/customers/${customerId}`)
+  revalidatePath('/activities')
 }

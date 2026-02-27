@@ -47,7 +47,7 @@ export function RecentActivityList({ activities }: RecentActivityListProps) {
       <CardHeader>
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-slate-900">Recent Activities</h3>
-          <Link href="/dashboard/activities" className="text-sm text-slate-600 hover:text-slate-900">
+          <Link href="/activities" className="text-sm text-slate-600 hover:text-slate-900">
             View all →
           </Link>
         </div>

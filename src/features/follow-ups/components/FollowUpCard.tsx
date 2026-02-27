@@ -38,7 +38,7 @@ export function FollowUpCard({ followUp, variant }: FollowUpCardProps) {
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
           <Link 
-            href={`/dashboard/customers/${followUp.customer_id}`}
+            href={`/customers/${followUp.customer_id}`}
             className="font-semibold text-slate-900 hover:text-slate-700 text-lg"
           >
             {followUp.customers.company_name}
@@ -81,7 +81,7 @@ export function FollowUpCard({ followUp, variant }: FollowUpCardProps) {
         </div>
       )}
 
-      <Link href={`/dashboard/customers/${followUp.customer_id}`}>
+      <Link href={`/customers/${followUp.customer_id}`}>
         <Button variant="primary" className="w-full">
           View Customer
         </Button>

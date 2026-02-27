@@ -33,7 +33,7 @@ export function CustomerFilters({ cities, industries, filters }: CustomerFilters
   }
 
   const clearAllFilters = () => {
-    router.push('/dashboard/customers')
+    router.push('/customers')
   }
 
   const activeFiltersCount = [filters.search, filters.city, filters.industry].filter(Boolean).length

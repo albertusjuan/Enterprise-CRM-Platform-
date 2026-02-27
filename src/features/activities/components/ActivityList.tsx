@@ -19,7 +19,7 @@ export function ActivityList({ data, currentPage }: ActivityListProps) {
   const totalPages = Math.ceil(data.count / data.pageSize)
 
   const goToPage = (page: number) => {
-    router.push(`/dashboard/activities?page=${page}`)
+    router.push(`/activities?page=${page}`)
   }
 
   return (

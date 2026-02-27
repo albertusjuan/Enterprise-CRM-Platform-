@@ -31,7 +31,7 @@ export default async function DashboardPage() {
             <p className="text-sm text-red-700 mt-1">These customers need immediate attention</p>
           </div>
           <Link
-            href="/dashboard/follow-ups"
+            href="/follow-ups"
             className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
           >
             View Follow-ups
@@ -44,13 +44,13 @@ export default async function DashboardPage() {
           icon="👥"
           label="Active Customers"
           value={stats.customerCount}
-          href="/dashboard/customers"
+          href="/customers"
         />
         <StatsCard
           icon="📋"
           label="Total Activities"
           value={stats.activityCount}
-          href="/dashboard/activities"
+          href="/activities"
         />
         <StatsCard
           icon="📞"
@@ -61,7 +61,7 @@ export default async function DashboardPage() {
           icon="🔔"
           label="Due Today"
           value={stats.todayCount}
-          href="/dashboard/follow-ups"
+          href="/follow-ups"
         />
       </div>
 

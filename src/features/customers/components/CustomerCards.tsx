@@ -13,7 +13,7 @@ export function CustomerCards({ customers }: CustomerCardsProps) {
       {customers.map((customer) => {
         const primaryContact = customer.contacts?.[0]
         return (
-          <Link key={customer.id} href={`/dashboard/customers/${customer.id}`}>
+          <Link key={customer.id} href={`/customers/${customer.id}`}>
             <Card className="p-5 hover:shadow-lg transition-shadow">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">

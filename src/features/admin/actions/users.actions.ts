@@ -23,9 +23,9 @@ export async function updateUser(userId: string, input: UpdateUserInput) {
 
   if (error) throw error
 
-  revalidatePath('/dashboard/admin')
-  revalidatePath(`/dashboard/admin/users/${userId}`)
-  redirect('/dashboard/admin')
+  revalidatePath('/admin')
+  revalidatePath(`/admin/users/${userId}`)
+  redirect('/admin')
 }
 
 export async function deleteUser(userId: string) {
@@ -43,5 +43,5 @@ export async function deleteUser(userId: string) {
 
   if (error) throw error
 
-  revalidatePath('/dashboard/admin')
+  revalidatePath('/admin')
 }
