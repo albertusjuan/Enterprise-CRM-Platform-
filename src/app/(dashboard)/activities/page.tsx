@@ -1,8 +1,18 @@
-export default function ActivitiesPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Activities</h1>
-      <p className="text-slate-600 mt-1">Activity list coming soon</p>
-    </div>
-  )
+import { getActivities } from '@/features/activities'
+import { ActivityList } from '@/features/activities'
+import { z } from 'zod'
+
+export const revalidate = 30
+
+const PageSchema = z.object({
+  page: z.coerce.number().int().positive().default(1),
+})
+
+export default async function ActivitiesPage({ searchParams }: { searchParams: Promise<any> }) {
+  const params = await searchParams
+  const { page } = PageSchema.parse(params)
+
+  const activitiesData = await getActivities(page)
+
+  return <ActivityList data={activitiesData} currentPage={page} />
 }
